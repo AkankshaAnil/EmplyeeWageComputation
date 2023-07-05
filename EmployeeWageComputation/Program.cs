@@ -17,7 +17,7 @@
         if(empCheck == IS_FULL_TIME)
         {
             Console.WriteLine("Employee Is Present");
-            empHour = 8;
+            empHour = 9;
         }
         else
         {

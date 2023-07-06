@@ -3,31 +3,34 @@
     private static void Main(string[] args)
     {
         Console.WriteLine("Welcome To Employee Wage Computation!");
-        int IS_PART_TIME = 1;
-        int IS_FULL_TIME = 2;
-        int EMP_RATE_PER_HOUR = 20;
+        const int IS_PART_TIME = 1;
+       const int IS_FULL_TIME = 2;
+       const int EMP_RATE_PER_HOUR = 20;
 
         int empHour = 0;
         int empWage = 0;
 
         Random random = new Random();
         int empCheck = random.Next(0,3);
-        if(empCheck == IS_PART_TIME)
-        {
-            Console.WriteLine("Employee Is Part Time Present");
-            empHour = 4;
-        }
-        else if (empCheck == IS_FULL_TIME)
-        {
-            Console.WriteLine("Employee Is Present");
-            empHour = 8;
 
-        }
-        else
+     
+        switch (empCheck)
+
         {
-            Console.WriteLine("Employee Is Absent");
+            case IS_PART_TIME:
+                empHour = 4;
+                break;
+            case IS_FULL_TIME:
+                empHour = 8;
+                break;
+            default:
+                empHour = 0;
+                break;
         }
+
+        
         empWage = empHour * EMP_RATE_PER_HOUR;
         Console.WriteLine("EmpWage :" + empWage);
+
     }
 }

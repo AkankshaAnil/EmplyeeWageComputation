@@ -38,7 +38,7 @@
 
             empWage = empHour * EMP_RATE_PER_HOUR;
             totalEmpWage += empWage;
-            //Console.WriteLine("EmpWage :" + empWage);
+            Console.WriteLine("EmpWage :" + empWage);
         }
         Console.WriteLine("Total EmpWage: " + totalEmpWage);
     }
